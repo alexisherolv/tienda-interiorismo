@@ -1,0 +1,357 @@
+.parejo{
+    flex-wrap: nowrap !important;
+}
+
+.info{
+    margin-top: 30px !important;
+    margin-left: 20px;
+}
+
+.productos .container .col-sm{
+    padding:3px;
+}
+
+.productos .container{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.sin-borde .container .row{
+    margin: 0;
+    flex-wrap: nowrap;
+}
+.sin-borde .container .row .col-sm{
+    padding: 3px;
+}
+ 
+.sin-borde .container{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.ver-producto .container .row{
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+.ver-producto .container-fluid{
+    margin-top: 70px;
+    background-color: #f4f4f4 !important;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.productos-view{
+    background-color: #f4f4f4 !important;
+}
+
+.ordenar .btn{
+    background-color:black !important;
+    color: white !important;
+    border-color: #000000 !important;
+}
+
+.ordenar .btn:hover{
+    background-color:white !important;
+    color: black !important;
+    border-color: #000000 !important;
+}
+
+
+.ordenar{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.sin-borde2 .container-fluid .row{
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.sin-borde2 .container-fluid .row .parejo{
+    flex-wrap: nowrap;
+}
+
+.card-deck .col-sm{
+    padding: 0%;
+    max-width: 100%;
+    justify-content: center;
+    
+}
+
+.card:hover{
+    transform: scale(1.0);
+    box-shadow: 0 10px 300px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    cursor: pointer;
+}
+
+.card{
+    background-color: #f4f4f4 !important;
+    margin-top: 15px;
+    margin-right: 0px !important;
+    font-family: 'Montserrat',serif;
+    width: 18rem;
+    padding: 0% !important;
+}
+
+.card-title{
+    margin-bottom: 0px !important;
+}
+
+.categoria-p{
+     font-family: 'Montserrat', serif;
+     margin-top: 30px;
+     font-size: 20px;
+     margin-bottom: 30px;
+}
+
+.categoria-p2{
+    font-family: 'Montserrat', serif;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.card p{
+    color: #B7ACA3;
+    font-size: 15px;
+}
+
+.card-title {
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.etiqueta{
+    background-color: #dcc4b4;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px !important;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+}
+
+.img-prod{
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+
+.ordenar .row{
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 2px;
+    border-color: #000000;
+}
+
+.ordenar .btn{
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0;
+    font-family: 'Montserrat',serif;
+    font-size: 13px;
+}
+
+.dropdown-menu a{
+    color: black;
+    font-family: 'Montserrat',serif;
+    
+}
+
+.dropdown-menu li{
+    font-size: 13px;  
+}
+
+.producto-titulo{
+    font-family: 'Montserrat',serif;
+    font-size: 30px;
+    margin-bottom:30px;
+}
+
+.producto-descripcion{
+    font-family: 'Montserrat',serif;
+    font-size: 13px;
+}
+
+.producto-sku{
+    margin-top:70px;
+    margin-bottom:10px;
+    font-family: 'Montserrat',serif;
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.producto-precio{
+    margin-top:30px;
+    margin-bottom:10px;
+    font-family: 'Montserrat',serif;
+    font-size: 18px;
+    color: #9a9a9a;
+}
+
+.boton-addtocart{
+    border-color: black;
+    background-color: black;
+    border-radius: 0px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Montserrat',serif;
+    font-size: 13px;
+    padding: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.boton-addtocart:hover {
+    background-color: white;
+    color: black;
+}
+
+.boton-wish span.icon {
+    background: url(./corazon2.svg) no-repeat;
+    float: left;
+    width: 20px;
+    height: 20px;
+    padding: 0%;
+    margin:0;
+}
+
+.boton-wish:hover {
+    background-color: white;
+    color: black;
+}
+
+.boton-wish{
+    border-color: black;
+    background-color: transparent;
+    color: white;
+    font-family: 'Montserrat',serif;
+    display: block;
+    padding: 10px !important;
+}
+
+.related-products h1 {
+    font-size: 20px;
+    font-family: 'Montserrat',serif;
+}
+
+
+.card-deck{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+
+
+/*Utilizando queries para ajustar experiencia en moviles*/
+@media (max-width: 575px) {
+    .sin-borde .container .row{
+        flex-wrap: wrap;
+    }
+
+    .sin-borde .container{
+        margin: 1rem;
+        padding: 1rem;
+        border: 2px;
+        text-align: center;
+    }
+
+    .img-prod{
+        margin: 0;
+    }
+
+    .parejo{
+        flex-wrap: nowrap;
+    }
+
+    .etiqueta{
+        background-color: #f4f4f4;
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    .card{ 
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .sin-borde .container .row{
+        flex-wrap: wrap;
+    }
+
+    .sin-borde .container{
+        margin: 1rem;
+        padding: 1rem;
+        border: 2px;
+        text-align: center;
+    }
+
+    .img-prod{
+        margin: 0;
+    }
+
+    .parejo{
+        flex-wrap: nowrap;
+    }
+
+    .etiqueta{
+        background-color: #f4f4f4;
+        color: #000000;
+        text-decoration: underline;
+    }
+    .card{ 
+        margin-left: auto;
+        margin-right: auto !important;
+    }
+
+    .botones-compra{
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    .ver-producto .container-fluid{
+        margin-left: 0 !important;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) { 
+    .sin-borde .container .row{
+        margin: 0;
+    }
+
+    .sin-borde .container{
+        margin-left: 0;
+        padding-left: 5px;
+    }
+
+    .img-prod{
+        margin: auto;
+    }
+
+    .card-title {
+        margin:0;
+        font-size: 13px;
+    }
+
+    .card{ 
+        margin-left: auto;
+        margin-right: auto !important;
+    }
+
+    .sin-borde .container{
+        margin-left: 0;
+        padding-left: 5px;
+    }
+}
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .sin-borde .container{
+        margin-left: 0;
+        padding-left: 5px;
+    }
+  }

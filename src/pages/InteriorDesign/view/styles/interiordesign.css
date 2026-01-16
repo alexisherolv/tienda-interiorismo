@@ -1,0 +1,42 @@
+.imagen{
+    margin-bottom: 70px;
+    padding: 0 !important;
+}
+
+.texto p{
+    font-family: 'Montserrat',serif;
+    font-size: 20px;
+}
+
+.texto h1{
+    font-family: 'Montserrat',serif;
+  
+    font-weight: bold;
+}
+
+.boton-contacto{
+    border-color: black;
+    background-color: transparent;
+    border-radius: 0px;
+    font-size: 15px;
+    color: black;
+    font-family: 'Montserrat',serif;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.boton-contacto:hover {
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 575px) {
+    .texto{
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}

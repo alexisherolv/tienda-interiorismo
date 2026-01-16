@@ -1,0 +1,79 @@
+.arte-2{
+    position: relative;    /* para poder posicionar el texto de forma absoluta */
+    display: inline-block; /* para que solo ocupe el ancho de la imagen */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat',serif;
+}
+
+.text-img h1{
+    font-size: 80px;
+}
+
+.text-img p{
+    margin-bottom: 0;
+}
+
+.text-img2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat',serif;
+}
+
+.text-img2 h1 {
+    font-size: 40px;
+}
+
+.text-img2 p {
+    margin-bottom: 0;
+}
+
+.text-img2 button {
+    border-color: white;
+    background-color: transparent;
+    border-radius: 0px;
+    font-size: 15px;
+}
+
+.text-img2 button:hover {
+    background-color: white;
+    color: black;
+}
+
+.get-info .col{
+    padding:0;
+}
+
+.get-info .container-fluid{
+    padding:0;
+}
+
+.home-products {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Utilizando queries para ajustar experiencia en moviles*/
+@media (max-width: 575px) {
+
+    .home-products .card-deck .col-sm .card{
+        margin:auto;
+    }
+}

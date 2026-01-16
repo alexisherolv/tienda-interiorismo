@@ -1,0 +1,91 @@
+.navbar {
+    text-align: center;
+    font-family: 'Montserrat',serif;
+    font-weight: 550;
+    font-size: small;
+  }
+
+.carrito{
+  margin-left: 0 !important;
+}
+
+  .scrolled{
+    background-color: black;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    min-width: 180px;
+  }
+
+  .actions a,
+  .actions img {
+      display: inline-flex;
+  }
+
+  .actions > * {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar-light .nav-item .nav-link {
+    color: white;
+  }
+  
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(3, 81, 77)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .nav-link:hover{
+    color:#B7ACA3;
+  }
+
+  .logo{
+    box-sizing:border-box;
+    display:block;
+    width:170px;        /*Ancho de la imagen nueva, aunque en este caso son iguales.*/
+    height:70px;       /*Alto de la imagen nueva, aunque en este caso son iguales.*/
+    
+  }
+
+  .nav-link{
+    color: white;
+  }
+
+  .zoom{
+    transition: transform .2s;
+  }
+
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .iconos{
+    margin: 0px;
+  }
+  
+  /*Utilizando queries para ajustar experiencia en moviles*/
+@media (max-width: 575px) {
+  .navbar{
+    background-color: black;
+  }
+
+  .navbar-toggler {
+    border-color: #ffffff;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .navbar{
+    background-color: black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar{
+    background-color: black;
+  }
+}

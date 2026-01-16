@@ -1,6 +1,6 @@
-# Ecommerce DECOART
+# Ecommerce Interiorismo
 
-Es una tienda en línea de muebles con resina epóxica y madera parota, propiedad de la empresa DECOARTDESING S.A. de C.V
+Es una tienda en línea de muebles con resina epóxica y madera parota.
 
 ## Proyecto Deployado
 
@@ -8,7 +8,7 @@ En el siguiente link pueden encontrar el proyecto deployado: [https://tienda-dec
 
 ### API
 
-El link del proyecto de la API en GITHUB es el siguiente: [https://github.com/alexisherolv/tienda-decoart-api2/](https://github.com/alexisherolv/tienda-decoart-api2/)
+El link del proyecto de la API en GITHUB es el siguiente: [https://github.com/alexisherolv/tienda-interiorismo/](https://github.com/alexisherolv/tienda-interiorismo/)
 
 Se utilizó la base de datos de MONGODB. Actualmente hay algunos productos y usuarios en la base de datos de prueba para probar el funcionamiento de la misma mediante los Checkpoints creados.
 

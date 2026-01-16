@@ -51,7 +51,7 @@ function Navbar() {
         <div>
             <nav className = {navbarClasses.join(" ")}>
                 <Link className="navbar-brand logo" aria-current="page" to="/">
-                        <img src={process.env.PUBLIC_URL + '/images/INTERIORISMO-LOGO-1.png'} width="170" height="70" alt="Decoart Interiorismo" />
+                        <img src={process.env.PUBLIC_URL + '/images/logo.png'} width="170" height="70" alt="Decoart Interiorismo" />
                 </Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

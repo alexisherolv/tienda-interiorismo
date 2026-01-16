@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Slides from "../../../atomics/molecules/Slides/Slides";
 import Card from "../../../atomics/molecules/Card/Card";
+import { getProducts } from '../services/products';
 
 export default function AllProducts(){
     const [products, setProducts] = useState([]);
@@ -9,22 +10,13 @@ export default function AllProducts(){
     const imagenSlide = `${process.env.PUBLIC_URL}/images/slide-prod2.png`;
 
     useEffect(function () {
-        fetch(`http://localhost:5001/v1/productos/`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            }
-        })
-        .then(function(response) {
-            return response.ok ? response.json() : Promise.reject();
-        })
-        .then(function(data) {
-            console.log(Object.values(data));
-            setProducts(Object.values(data));
-        })
-        .catch(function(err) {
-            alert("No se pudo consultar la informacion de los productos");
-        });
+        getProducts()
+            .then(data => {
+                setProducts(Object.values(data));
+            })
+            .catch(() => {
+                alert('No se pudo consultar la información de los productos');
+            });
     }, []);
 
     return (

@@ -151,6 +151,7 @@
     display: inline-block;
     text-align: center;
     margin-left: 0px !important;
+    max-height: 23px !important;
 }
 
 .texto-encima{

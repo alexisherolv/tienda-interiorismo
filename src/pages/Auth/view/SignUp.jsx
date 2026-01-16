@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Slides from "../../../atomics/molecules/Slides/Slides";
+import { signUp } from '../services/users';
 
 export default function SignUp() {
   const [username, setUsername] = useState("");
@@ -50,15 +51,8 @@ export default function SignUp() {
         tipo: "cliente"
     };
 
-    fetch(`http://localhost:5001/v1/usuarios/`, {
-      method: "POST",
-      body: JSON.stringify(newUser),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then((response) => response.json())
-    .then((data) => {
+    signUp(newUser)
+    .then(data => {
       if (data.errors) {
         alert("Ocurrió un error");
       } else {

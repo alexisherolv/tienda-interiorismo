@@ -4,31 +4,22 @@ import { BrowserRouter as Router,
     useParams } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
-
+import { getProductById } from '../services/products';
 
 export default function(){
     const [product, setProduct] = useState(null);
-    const { productoId } = useParams();
+    const { productId } = useParams();
     const { addItem } = useCart();
 
      const imagenSlide = `${process.env.PUBLIC_URL}/images/minislide.png`;
 
     useEffect(function () {
-        fetch(`http://localhost:5001/v1/productos/${productoId}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            }
-        })
-        .then(function(response) {
-            return response.ok ? response.json() : Promise.reject();
-        })
-        .then(function(data) {
-            console.log(data);
+        getProductById(productId)
+        .then(data => {
             setProduct(data);
         })
-        .catch(function(err) {
-            alert("No se pudo consultar la informacion de los productos");
+        .catch(() => {
+            alert('No se pudo consultar la información de los productos');
         });
     }, []);
 

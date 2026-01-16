@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Slides from "../../../atomics/molecules/Slides/Slides";
+import { getUserById } from '../services/users';
 
 export default function Profile() {
   const token = localStorage.getItem("token");
@@ -16,14 +17,13 @@ export default function Profile() {
         return null;
     }
 
-    fetch(`http://localhost:5001/v1/usuarios/${id}`, {
-      method: "GET",
-      headers: {
-        Authorization: `Token ${token}`
-      }
+    getUserById(id, token)
+    .then(data => {
+        setUser(data);
     })
-    .then((response) => response.json())
-    .then((data) => setUser(data));
+    .catch(() => {
+        alert('No se pudo consultar la información de los productos');
+    });
   }, []);
 
   const logout = () => {

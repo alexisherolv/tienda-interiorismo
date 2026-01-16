@@ -3,6 +3,7 @@ import Artesanos from "../../../atomics/organisms/Artisans/Artisans";
 import GetInfo from "../../../atomics/organisms/GetInfo/GetInfo";
 import Slides from "../../../atomics/molecules/Slides/Slides";
 import Card from "../../../atomics/molecules/Card/Card";
+import { getProducts } from '../services/home';
 
 export default function Home() {
 
@@ -11,24 +12,14 @@ export default function Home() {
     const imagenSlide = `${process.env.PUBLIC_URL}/images/SLIDE7.png`;
 
     useEffect(function () {
-        fetch(`http://localhost:5001/v1/productos/`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            }
-        })
-        .then(function(response) {
-            return response.ok ? response.json() : Promise.reject();
-        })
-        .then(function(data) {
-            console.log(Object.values(data));
+        getProducts()
+        .then(data => {
             setProducts(Object.values(data));
         })
-        .catch(function(err) {
-            alert("No se pudo consultar la informacion de los productos");
+        .catch(() => {
+            alert('No se pudo consultar la información de los productos');
         });
     }, []);
-
 
     return products.length === 0 ? (
         <>

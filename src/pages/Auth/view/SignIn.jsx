@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Slides from "../../../atomics/molecules/Slides/Slides";
+import { login } from '../services/users';
 
 export default function SignIn() {
   const token = localStorage.getItem("token");
@@ -38,34 +39,27 @@ export default function SignIn() {
 
     const credentials = { email, password };
 
-    fetch(`http://localhost:5001/v1/usuarios/entrar`, {
-      method: "POST",
-      body: JSON.stringify(credentials),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.errors) {
-        setError(
-          <p className="need">El correo electrónico o la contraseña son incorrectos</p>
-        );
-      } else {
+    login(credentials)
+    .then(data => {
+        if (data.errors) {
+          setError(
+            <p className="need">El correo electrónico o la contraseña son incorrectos</p>
+          );
+        } else {
 
-        //Token
-        localStorage.setItem("tipo", data.user.tipo);
-        localStorage.setItem("token", data.user.token);
-        localStorage.setItem("id", data.user.id);
-        
-        if(data.user.tipo === "administrador")
-        {
-          navigate("/admin");
+          //Token
+          localStorage.setItem("tipo", data.user.tipo);
+          localStorage.setItem("token", data.user.token);
+          localStorage.setItem("id", data.user.id);
+          
+          if(data.user.tipo === "administrador")
+          {
+            navigate("/admin");
+          }
+          else{
+            navigate("/profile");
+          }
         }
-        else{
-          navigate("/profile");
-        }
-      }
     });
   }
 
